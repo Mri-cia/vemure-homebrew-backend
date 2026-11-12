@@ -1,580 +1,770 @@
 [
   {
+    "id": 1,
     "trait_name": "Absolute Direction",
     "type": "Physical",
     "category": "advantage",
-    "notes": "You always know which way is north and can retrace your path"
+    "notes": "You always know which way is north and can retrace your path",
+    "is_custom": false
   },
   {
+    "id": 2,
     "trait_name": "Absolute Timing",
     "type": "Mental",
     "category": "advantage",
-    "notes": "You always know the time to within a few seconds"
+    "notes": "You always know the time to within a few seconds",
+    "is_custom": false
   },
   {
+    "id": 3,
     "trait_name": "Acute Senses",
     "type": "Physical",
     "category": "advantage",
-    "notes": "Bonus to Perception rolls with one chosen sense (e.g. Vision, Hearing)"
+    "notes": "Bonus to Perception rolls with one chosen sense (e.g. Vision, Hearing)",
+    "is_custom": false
   },
   {
+    "id": 4,
     "trait_name": "Allies",
     "type": "Social",
     "category": "advantage",
-    "notes": "One or more loyal helpers who assist you; cost depends on their power and how often they show up"
+    "notes": "One or more loyal helpers who assist you; cost depends on their power and how often they show up",
+    "is_custom": false
   },
   {
+    "id": 5,
     "trait_name": "Ambidexterity",
     "type": "Physical",
     "category": "advantage",
-    "notes": "No penalty for using your off hand"
+    "notes": "No penalty for using your off hand",
+    "is_custom": false
   },
   {
+    "id": 6,
     "trait_name": "Animal Empathy",
     "type": "Mental",
     "category": "advantage",
-    "notes": "You sense the moods and intentions of animals"
+    "notes": "You sense the moods and intentions of animals",
+    "is_custom": false
   },
   {
+    "id": 7,
     "trait_name": "Appearance",
     "type": "Physical",
     "category": "advantage",
-    "notes": "Attractive looks that give bonuses to reactions from others"
+    "notes": "Attractive looks that give bonuses to reactions from others",
+    "is_custom": false
   },
   {
+    "id": 8,
     "trait_name": "Charisma",
     "type": "Social",
     "category": "advantage",
-    "notes": "Natural magnetism that boosts reaction rolls and influence skills"
+    "notes": "Natural magnetism that boosts reaction rolls and influence skills",
+    "is_custom": false
   },
   {
+    "id": 9,
     "trait_name": "Combat Reflexes",
     "type": "Mental",
     "category": "advantage",
-    "notes": "Better active defenses, less chance of freezing in surprise"
+    "notes": "Better active defenses, less chance of freezing in surprise",
+    "is_custom": false
   },
   {
+    "id": 10,
     "trait_name": "Common Sense",
     "type": "Mental",
     "category": "advantage",
-    "notes": "The GM warns you when you're about to do something foolish"
+    "notes": "The GM warns you when you're about to do something foolish",
+    "is_custom": false
   },
   {
+    "id": 11,
     "trait_name": "Contacts",
     "type": "Social",
     "category": "advantage",
-    "notes": "Informants who supply information or favors when asked"
+    "notes": "Informants who supply information or favors when asked",
+    "is_custom": false
   },
   {
+    "id": 12,
     "trait_name": "Danger Sense",
     "type": "Mental",
     "category": "advantage",
-    "notes": "A sixth sense that warns you of ambushes and imminent danger"
+    "notes": "A sixth sense that warns you of ambushes and imminent danger",
+    "is_custom": false
   },
   {
+    "id": 13,
     "trait_name": "Daredevil",
     "type": "Mental",
     "category": "advantage",
-    "notes": "Fortune sometimes favors you when you take reckless risks"
+    "notes": "Fortune sometimes favors you when you take reckless risks",
+    "is_custom": false
   },
   {
+    "id": 14,
     "trait_name": "Eidetic Memory",
     "type": "Mental",
     "category": "advantage",
-    "notes": "You remember nearly everything you have seen or heard"
+    "notes": "You remember nearly everything you have seen or heard",
+    "is_custom": false
   },
   {
+    "id": 15,
     "trait_name": "Empathy",
     "type": "Mental",
     "category": "advantage",
-    "notes": "You get hunches about people's feelings and sincerity"
+    "notes": "You get hunches about people's feelings and sincerity",
+    "is_custom": false
   },
   {
+    "id": 16,
     "trait_name": "Fit",
     "type": "Physical",
     "category": "advantage",
-    "notes": "Better recovery from fatigue and a bonus to some health rolls"
+    "notes": "Better recovery from fatigue and a bonus to some health rolls",
+    "is_custom": false
   },
   {
+    "id": 17,
     "trait_name": "Gizmos",
     "type": "Mental",
     "category": "advantage",
-    "notes": "You can produce a handy gadget on the spot, though it may not work reliably"
+    "notes": "You can produce a handy gadget on the spot, though it may not work reliably",
+    "is_custom": false
   },
   {
+    "id": 18,
     "trait_name": "Hard to Kill",
     "type": "Physical",
     "category": "advantage",
-    "notes": "Bonus to survive mortal wounds and avoid death rolls"
+    "notes": "Bonus to survive mortal wounds and avoid death rolls",
+    "is_custom": false
   },
   {
+    "id": 19,
     "trait_name": "High Pain Threshold",
     "type": "Physical",
     "category": "advantage",
-    "notes": "Ignore the usual penalties of shock and pain from injury"
+    "notes": "Ignore the usual penalties of shock and pain from injury",
+    "is_custom": false
   },
   {
+    "id": 20,
     "trait_name": "Higher Purpose",
     "type": "Mental",
     "category": "advantage",
-    "notes": "Bonus to skill rolls when working toward a specific cause"
+    "notes": "Bonus to skill rolls when working toward a specific cause",
+    "is_custom": false
   },
   {
+    "id": 21,
     "trait_name": "Intuition",
     "type": "Mental",
     "category": "advantage",
-    "notes": "Your hunches and guesses tend to be right"
+    "notes": "Your hunches and guesses tend to be right",
+    "is_custom": false
   },
   {
+    "id": 22,
     "trait_name": "Language Talent",
     "type": "Mental",
     "category": "advantage",
-    "notes": "Bonus to learning and using languages"
+    "notes": "Bonus to learning and using languages",
+    "is_custom": false
   },
   {
+    "id": 23,
     "trait_name": "Lucky",
     "type": "Mental",
     "category": "advantage",
-    "notes": "Allows rerolling bad dice results, usable at limited intervals"
+    "notes": "Allows rerolling bad dice results, usable at limited intervals",
+    "is_custom": false
   },
   {
+    "id": 24,
     "trait_name": "Magery",
     "type": "Mental",
     "category": "advantage",
-    "notes": "Aptitude for magic; required to learn and cast spells in most settings"
+    "notes": "Aptitude for magic; required to learn and cast spells in most settings",
+    "is_custom": false
   },
   {
+    "id": 25,
     "trait_name": "Night Vision",
     "type": "Physical",
     "category": "advantage",
-    "notes": "Reduces darkness penalties to vision"
+    "notes": "Reduces darkness penalties to vision",
+    "is_custom": false
   },
   {
+    "id": 26,
     "trait_name": "Patron",
     "type": "Social",
     "category": "advantage",
-    "notes": "A powerful person or organization that helps you"
+    "notes": "A powerful person or organization that helps you",
+    "is_custom": false
   },
   {
+    "id": 27,
     "trait_name": "Perfect Balance",
     "type": "Physical",
     "category": "advantage",
-    "notes": "Excellent balance on narrow or unstable surfaces"
+    "notes": "Excellent balance on narrow or unstable surfaces",
+    "is_custom": false
   },
   {
+    "id": 28,
     "trait_name": "Rapid Healing",
     "type": "Physical",
     "category": "advantage",
-    "notes": "You recover from injury and illness faster than most"
+    "notes": "You recover from injury and illness faster than most",
+    "is_custom": false
   },
   {
+    "id": 29,
     "trait_name": "Reputation",
     "type": "Social",
     "category": "advantage",
-    "notes": "Others recognize and react to you based on a specific reputation"
+    "notes": "Others recognize and react to you based on a specific reputation",
+    "is_custom": false
   },
   {
+    "id": 30,
     "trait_name": "Resistant",
     "type": "Physical",
     "category": "advantage",
-    "notes": "Bonus to resist a particular threat such as disease or poison"
+    "notes": "Bonus to resist a particular threat such as disease or poison",
+    "is_custom": false
   },
   {
+    "id": 31,
     "trait_name": "Signature Gear",
     "type": "Social",
     "category": "advantage",
-    "notes": "A special item that is replaced or recovered if lost or stolen"
+    "notes": "A special item that is replaced or recovered if lost or stolen",
+    "is_custom": false
   },
   {
+    "id": 32,
     "trait_name": "Status",
     "type": "Social",
     "category": "advantage",
-    "notes": "Your rank or standing in society"
+    "notes": "Your rank or standing in society",
+    "is_custom": false
   },
   {
+    "id": 33,
     "trait_name": "Strong Will",
     "type": "Mental",
     "category": "advantage",
-    "notes": "Bonus to resist fear, mind control, and coercion"
+    "notes": "Bonus to resist fear, mind control, and coercion",
+    "is_custom": false
   },
   {
+    "id": 34,
     "trait_name": "Toughness",
     "type": "Physical",
     "category": "advantage",
-    "notes": "Natural damage resistance that reduces harm from attacks"
+    "notes": "Natural damage resistance that reduces harm from attacks",
+    "is_custom": false
   },
   {
+    "id": 35,
     "trait_name": "Unfazeable",
     "type": "Mental",
     "category": "advantage",
-    "notes": "Almost nothing startles you"
+    "notes": "Almost nothing startles you",
+    "is_custom": false
   },
   {
+    "id": 36,
     "trait_name": "Voice",
     "type": "Physical",
     "category": "advantage",
-    "notes": "A pleasing voice that helps with singing and persuasion"
+    "notes": "A pleasing voice that helps with singing and persuasion",
+    "is_custom": false
   },
   {
+    "id": 37,
     "trait_name": "Wealth",
     "type": "Social",
     "category": "advantage",
-    "notes": "Starting money level above average"
+    "notes": "Starting money level above average",
+    "is_custom": false
   },
-
   {
+    "id": 38,
     "trait_name": "Absent-Mindedness",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "You easily lose track of what you are doing or forget things"
+    "notes": "You easily lose track of what you are doing or forget things",
+    "is_custom": false
   },
   {
+    "id": 39,
     "trait_name": "Addiction",
     "type": "Physical",
     "category": "disadvantage",
-    "notes": "Dependence on a substance with costs and withdrawal"
+    "notes": "Dependence on a substance with costs and withdrawal",
+    "is_custom": false
   },
   {
+    "id": 40,
     "trait_name": "Alcoholism",
     "type": "Physical",
     "category": "disadvantage",
-    "notes": "Craving for alcohol that impairs your judgment and finances"
+    "notes": "Craving for alcohol that impairs your judgment and finances",
+    "is_custom": false
   },
   {
+    "id": 41,
     "trait_name": "Bad Sight",
     "type": "Physical",
     "category": "disadvantage",
-    "notes": "Poor vision, often correctable with glasses"
+    "notes": "Poor vision, often correctable with glasses",
+    "is_custom": false
   },
   {
+    "id": 42,
     "trait_name": "Bad Temper",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "You lose your composure easily and may lash out"
+    "notes": "You lose your composure easily and may lash out",
+    "is_custom": false
   },
   {
+    "id": 43,
     "trait_name": "Blindness",
     "type": "Physical",
     "category": "disadvantage",
-    "notes": "You cannot see"
+    "notes": "You cannot see",
+    "is_custom": false
   },
   {
+    "id": 44,
     "trait_name": "Bloodlust",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "You tend to kill helpless or surrendering enemies"
+    "notes": "You tend to kill helpless or surrendering enemies",
+    "is_custom": false
   },
   {
+    "id": 45,
     "trait_name": "Bully",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "You push around and mistreat those weaker than you"
+    "notes": "You push around and mistreat those weaker than you",
+    "is_custom": false
   },
   {
+    "id": 46,
     "trait_name": "Callous",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "Cold toward others' suffering and feelings"
+    "notes": "Cold toward others' suffering and feelings",
+    "is_custom": false
   },
   {
+    "id": 47,
     "trait_name": "Code of Honor",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "You follow a strict personal or professional code"
+    "notes": "You follow a strict personal or professional code",
+    "is_custom": false
   },
   {
+    "id": 48,
     "trait_name": "Compulsive Behavior",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "A repetitive urge you must act on, such as lying or gambling"
+    "notes": "A repetitive urge you must act on, such as lying or gambling",
+    "is_custom": false
   },
   {
+    "id": 49,
     "trait_name": "Cowardice",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "Danger frightens you and you avoid it"
+    "notes": "Danger frightens you and you avoid it",
+    "is_custom": false
   },
   {
+    "id": 50,
     "trait_name": "Curious",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "You cannot resist investigating mysteries and unknowns"
+    "notes": "You cannot resist investigating mysteries and unknowns",
+    "is_custom": false
   },
   {
+    "id": 51,
     "trait_name": "Deafness",
     "type": "Physical",
     "category": "disadvantage",
-    "notes": "You cannot hear"
+    "notes": "You cannot hear",
+    "is_custom": false
   },
   {
+    "id": 52,
     "trait_name": "Dependents",
     "type": "Social",
     "category": "disadvantage",
-    "notes": "People who rely on you and need protection"
+    "notes": "People who rely on you and need protection",
+    "is_custom": false
   },
   {
+    "id": 53,
     "trait_name": "Duty",
     "type": "Social",
     "category": "disadvantage",
-    "notes": "An obligation to a group or organization that can call on you"
+    "notes": "An obligation to a group or organization that can call on you",
+    "is_custom": false
   },
   {
+    "id": 54,
     "trait_name": "Easy to Read",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "Your emotions and intentions show plainly to others"
+    "notes": "Your emotions and intentions show plainly to others",
+    "is_custom": false
   },
   {
+    "id": 55,
     "trait_name": "Enemy",
     "type": "Social",
     "category": "disadvantage",
-    "notes": "A person or group that actively works against you"
+    "notes": "A person or group that actively works against you",
+    "is_custom": false
   },
   {
+    "id": 56,
     "trait_name": "Fanaticism",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "Obsessive devotion to a cause, faith, or leader"
+    "notes": "Obsessive devotion to a cause, faith, or leader",
+    "is_custom": false
   },
   {
+    "id": 57,
     "trait_name": "Glutton",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "You overindulge in food at every chance"
+    "notes": "You overindulge in food at every chance",
+    "is_custom": false
   },
   {
+    "id": 58,
     "trait_name": "Greed",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "You are drawn to wealth and tempted to take it"
+    "notes": "You are drawn to wealth and tempted to take it",
+    "is_custom": false
   },
   {
+    "id": 59,
     "trait_name": "Gullibility",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "You tend to believe almost anything you're told"
+    "notes": "You tend to believe almost anything you're told",
+    "is_custom": false
   },
   {
+    "id": 60,
     "trait_name": "Honesty",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "You obey the law and avoid crime"
+    "notes": "You obey the law and avoid crime",
+    "is_custom": false
   },
   {
+    "id": 61,
     "trait_name": "Impulsiveness",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "You act before thinking"
+    "notes": "You act before thinking",
+    "is_custom": false
   },
   {
+    "id": 62,
     "trait_name": "Jealousy",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "You resent others' success, status, or attention"
+    "notes": "You resent others' success, status, or attention",
+    "is_custom": false
   },
   {
+    "id": 63,
     "trait_name": "Klutz",
     "type": "Physical",
     "category": "disadvantage",
-    "notes": "Clumsy; penalties and mishaps when handling things"
+    "notes": "Clumsy; penalties and mishaps when handling things",
+    "is_custom": false
   },
   {
+    "id": 64,
     "trait_name": "Lame",
     "type": "Physical",
     "category": "disadvantage",
-    "notes": "Reduced mobility from a damaged leg"
+    "notes": "Reduced mobility from a damaged leg",
+    "is_custom": false
   },
   {
+    "id": 65,
     "trait_name": "Lecherousness",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "You pursue romantic or sexual attention to a fault"
+    "notes": "You pursue romantic or sexual attention to a fault",
+    "is_custom": false
   },
   {
+    "id": 66,
     "trait_name": "Low Pain Threshold",
     "type": "Physical",
     "category": "disadvantage",
-    "notes": "You suffer extra from pain and shock"
+    "notes": "You suffer extra from pain and shock",
+    "is_custom": false
   },
   {
+    "id": 67,
     "trait_name": "Miserliness",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "You hate spending money and hoard it"
+    "notes": "You hate spending money and hoard it",
+    "is_custom": false
   },
   {
+    "id": 68,
     "trait_name": "Nightmares",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "Recurring bad dreams that disturb your rest"
+    "notes": "Recurring bad dreams that disturb your rest",
+    "is_custom": false
   },
   {
+    "id": 69,
     "trait_name": "Obsession",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "Fixation on a goal you pursue above everything else"
+    "notes": "Fixation on a goal you pursue above everything else",
+    "is_custom": false
   },
   {
+    "id": 70,
     "trait_name": "Odious Personal Habit",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "A habit that others find off-putting"
+    "notes": "A habit that others find off-putting",
+    "is_custom": false
   },
   {
+    "id": 71,
     "trait_name": "One Eye",
     "type": "Physical",
     "category": "disadvantage",
-    "notes": "Loss of depth perception and part of your vision"
+    "notes": "Loss of depth perception and part of your vision",
+    "is_custom": false
   },
   {
+    "id": 72,
     "trait_name": "Overconfidence",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "You believe you are more capable than you are"
+    "notes": "You believe you are more capable than you are",
+    "is_custom": false
   },
   {
+    "id": 73,
     "trait_name": "Pacifism",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "You refuse to fight or kill, in varying degrees"
+    "notes": "You refuse to fight or kill, in varying degrees",
+    "is_custom": false
   },
   {
+    "id": 74,
     "trait_name": "Paranoia",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "You suspect others of plotting against you"
+    "notes": "You suspect others of plotting against you",
+    "is_custom": false
   },
   {
+    "id": 75,
     "trait_name": "Phobia",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "Irrational fear of something specific"
+    "notes": "Irrational fear of something specific",
+    "is_custom": false
   },
   {
+    "id": 76,
     "trait_name": "Poverty",
     "type": "Social",
     "category": "disadvantage",
-    "notes": "Starting money level below average"
+    "notes": "Starting money level below average",
+    "is_custom": false
   },
   {
+    "id": 77,
     "trait_name": "Selfless",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "You place others' needs ahead of your own"
+    "notes": "You place others' needs ahead of your own",
+    "is_custom": false
   },
   {
+    "id": 78,
     "trait_name": "Shyness",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "Uncomfortable around strangers and crowds"
+    "notes": "Uncomfortable around strangers and crowds",
+    "is_custom": false
   },
   {
+    "id": 79,
     "trait_name": "Social Stigma",
     "type": "Social",
     "category": "disadvantage",
-    "notes": "Society treats you as inferior or untrustworthy"
+    "notes": "Society treats you as inferior or untrustworthy",
+    "is_custom": false
   },
   {
+    "id": 80,
     "trait_name": "Stubbornness",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "You dislike changing your mind or plans"
+    "notes": "You dislike changing your mind or plans",
+    "is_custom": false
   },
   {
+    "id": 81,
     "trait_name": "Truthfulness",
     "type": "Mental",
     "category": "disadvantage",
-    "notes": "You have difficulty lying"
+    "notes": "You have difficulty lying",
+    "is_custom": false
   },
-
   {
+    "id": 82,
     "trait_name": "Attentive",
     "type": "Mental",
     "category": "quirk",
-    "notes": "Always listens closely when others talk"
+    "notes": "Always listens closely when others talk",
+    "is_custom": false
   },
   {
+    "id": 83,
     "trait_name": "Dislikes Authority",
     "type": "Mental",
     "category": "quirk",
-    "notes": "Bristles at being given orders"
+    "notes": "Bristles at being given orders",
+    "is_custom": false
   },
   {
+    "id": 84,
     "trait_name": "Distinctive Feature",
     "type": "Physical",
     "category": "quirk",
-    "notes": "A memorable physical detail such as a scar or birthmark"
+    "notes": "A memorable physical detail such as a scar or birthmark",
+    "is_custom": false
   },
   {
+    "id": 85,
     "trait_name": "Dull",
     "type": "Mental",
     "category": "quirk",
-    "notes": "Avoids drawing attention and tends to blend in"
+    "notes": "Avoids drawing attention and tends to blend in",
+    "is_custom": false
   },
   {
+    "id": 86,
     "trait_name": "Fashion Plate",
     "type": "Social",
     "category": "quirk",
-    "notes": "Takes great care in dressing well"
+    "notes": "Takes great care in dressing well",
+    "is_custom": false
   },
   {
+    "id": 87,
     "trait_name": "Hates Crowds",
     "type": "Mental",
     "category": "quirk",
-    "notes": "Grows irritated in large gatherings"
+    "notes": "Grows irritated in large gatherings",
+    "is_custom": false
   },
   {
+    "id": 88,
     "trait_name": "Humble",
     "type": "Mental",
     "category": "quirk",
-    "notes": "Downplays personal accomplishments"
+    "notes": "Downplays personal accomplishments",
+    "is_custom": false
   },
   {
+    "id": 89,
     "trait_name": "Likes Animals",
     "type": "Mental",
     "category": "quirk",
-    "notes": "Is quick to befriend and care for creatures"
+    "notes": "Is quick to befriend and care for creatures",
+    "is_custom": false
   },
   {
+    "id": 90,
     "trait_name": "Neat",
     "type": "Mental",
     "category": "quirk",
-    "notes": "Keeps belongings tidy and organized"
+    "notes": "Keeps belongings tidy and organized",
+    "is_custom": false
   },
   {
+    "id": 91,
     "trait_name": "Nosy",
     "type": "Mental",
     "category": "quirk",
-    "notes": "Enjoys prying into other people's business"
+    "notes": "Enjoys prying into other people's business",
+    "is_custom": false
   },
   {
+    "id": 92,
     "trait_name": "Proud",
     "type": "Mental",
     "category": "quirk",
-    "notes": "Cares a lot about personal dignity"
+    "notes": "Cares a lot about personal dignity",
+    "is_custom": false
   },
   {
+    "id": 93,
     "trait_name": "Superstitious",
     "type": "Mental",
     "category": "quirk",
-    "notes": "Believes in omens and follows small rituals"
+    "notes": "Believes in omens and follows small rituals",
+    "is_custom": false
   },
   {
+    "id": 94,
     "trait_name": "Sleeps In",
     "type": "Physical",
     "category": "quirk",
-    "notes": "Hard to wake in the morning"
+    "notes": "Hard to wake in the morning",
+    "is_custom": false
   },
   {
+    "id": 95,
     "trait_name": "Talks to Self",
     "type": "Mental",
     "category": "quirk",
-    "notes": "Mutters aloud when thinking or working"
+    "notes": "Mutters aloud when thinking or working",
+    "is_custom": false
   },
   {
+    "id": 96,
     "trait_name": "Trademark",
     "type": "Social",
     "category": "quirk",
-    "notes": "Leaves a signature mark or does something in a recognizable style"
+    "notes": "Leaves a signature mark or does something in a recognizable style",
+    "is_custom": false
   }
 ]

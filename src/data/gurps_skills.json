@@ -1,530 +1,706 @@
 [
   {
+    "id": 1,
     "skill_name": "Acrobatics",
     "attribute": "DX",
     "difficulty": "Hard",
-    "notes": "Flips, rolls, and balance; helps with dodging falls"
+    "notes": "Flips, rolls, and balance; helps with dodging falls",
+    "requires_specialization": false
   },
   {
+    "id": 2,
     "skill_name": "Acting",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Feigning emotions and playing a role"
+    "notes": "Feigning emotions and playing a role",
+    "requires_specialization": false
   },
   {
+    "id": 3,
     "skill_name": "Animal Handling",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Specialization required (e.g. Dogs, Equines)"
+    "notes": "Specialization required (e.g. Dogs, Equines)",
+    "requires_specialization": true
   },
   {
+    "id": 4,
     "skill_name": "Area Knowledge",
     "attribute": "IQ",
     "difficulty": "Easy",
-    "notes": "Familiarity with a specific place; specialization required"
+    "notes": "Familiarity with a specific place; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 5,
     "skill_name": "Armoury",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Maintaining and repairing weapons and armor; specialization required"
+    "notes": "Maintaining and repairing weapons and armor; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 6,
     "skill_name": "Artist",
     "attribute": "IQ",
     "difficulty": "Hard",
-    "notes": "Visual art such as painting or sculpture; specialization required"
+    "notes": "Visual art such as painting or sculpture; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 7,
     "skill_name": "Axe/Mace",
     "attribute": "DX",
     "difficulty": "Average",
-    "notes": "Melee combat with axes, maces, and similar weapons"
+    "notes": "Melee combat with axes, maces, and similar weapons",
+    "requires_specialization": false
   },
   {
+    "id": 8,
     "skill_name": "Bard",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Public speaking and oratory"
+    "notes": "Public speaking and oratory",
+    "requires_specialization": false
   },
   {
+    "id": 9,
     "skill_name": "Bow",
     "attribute": "DX",
     "difficulty": "Hard",
-    "notes": "Shooting bows"
+    "notes": "Shooting bows",
+    "requires_specialization": false
   },
   {
+    "id": 10,
     "skill_name": "Boxing",
     "attribute": "DX",
     "difficulty": "Average",
-    "notes": "Punching technique that improves damage and parries"
+    "notes": "Punching technique that improves damage and parries",
+    "requires_specialization": false
   },
   {
+    "id": 11,
     "skill_name": "Brawling",
     "attribute": "DX",
     "difficulty": "Easy",
-    "notes": "Basic unarmed fighting"
+    "notes": "Basic unarmed fighting",
+    "requires_specialization": false
   },
   {
+    "id": 12,
     "skill_name": "Broadsword",
     "attribute": "DX",
     "difficulty": "Average",
-    "notes": "Melee combat with swords such as broadswords and sabers"
+    "notes": "Melee combat with swords such as broadswords and sabers",
+    "requires_specialization": false
   },
   {
+    "id": 13,
     "skill_name": "Camouflage",
     "attribute": "IQ",
     "difficulty": "Easy",
-    "notes": "Hiding people and objects in the environment"
+    "notes": "Hiding people and objects in the environment",
+    "requires_specialization": false
   },
   {
+    "id": 14,
     "skill_name": "Carousing",
     "attribute": "HT",
     "difficulty": "Easy",
-    "notes": "Socializing, drinking, and making contacts"
+    "notes": "Socializing, drinking, and making contacts",
+    "requires_specialization": false
   },
   {
+    "id": 15,
     "skill_name": "Carpentry",
     "attribute": "IQ",
     "difficulty": "Easy",
-    "notes": "Building and repairing wooden structures"
+    "notes": "Building and repairing wooden structures",
+    "requires_specialization": false
   },
   {
+    "id": 16,
     "skill_name": "Climbing",
     "attribute": "DX",
     "difficulty": "Average",
-    "notes": "Scaling walls, cliffs, and ropes"
+    "notes": "Scaling walls, cliffs, and ropes",
+    "requires_specialization": false
   },
   {
+    "id": 17,
     "skill_name": "Computer Operation",
     "attribute": "IQ",
     "difficulty": "Easy",
-    "notes": "General use of computers and software"
+    "notes": "General use of computers and software",
+    "requires_specialization": false
   },
   {
+    "id": 18,
     "skill_name": "Connoisseur",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Appreciation of a field such as wine or art; specialization required"
+    "notes": "Appreciation of a field such as wine or art; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 19,
     "skill_name": "Cooking",
     "attribute": "IQ",
     "difficulty": "Easy",
-    "notes": "Preparing food"
+    "notes": "Preparing food",
+    "requires_specialization": false
   },
   {
+    "id": 20,
     "skill_name": "Crossbow",
     "attribute": "DX",
     "difficulty": "Easy",
-    "notes": "Shooting crossbows"
+    "notes": "Shooting crossbows",
+    "requires_specialization": false
   },
   {
+    "id": 21,
     "skill_name": "Current Affairs",
     "attribute": "IQ",
     "difficulty": "Easy",
-    "notes": "Awareness of news and events; specialization required"
+    "notes": "Awareness of news and events; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 22,
     "skill_name": "Dancing",
     "attribute": "DX",
     "difficulty": "Average",
-    "notes": "Social and performance dance"
+    "notes": "Social and performance dance",
+    "requires_specialization": false
   },
   {
+    "id": 23,
     "skill_name": "Detect Lies",
     "attribute": "Per",
     "difficulty": "Hard",
-    "notes": "Spotting deception in others"
+    "notes": "Spotting deception in others",
+    "requires_specialization": false
   },
   {
+    "id": 24,
     "skill_name": "Diagnosis",
     "attribute": "IQ",
     "difficulty": "Hard",
-    "notes": "Identifying illness; specialization required"
+    "notes": "Identifying illness; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 25,
     "skill_name": "Diplomacy",
     "attribute": "IQ",
     "difficulty": "Hard",
-    "notes": "Negotiation and settling disputes"
+    "notes": "Negotiation and settling disputes",
+    "requires_specialization": false
   },
   {
+    "id": 26,
     "skill_name": "Disguise",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Altering appearance; specialization required"
+    "notes": "Altering appearance; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 27,
     "skill_name": "Driving",
     "attribute": "DX",
     "difficulty": "Average",
-    "notes": "Operating ground vehicles; specialization required"
+    "notes": "Operating ground vehicles; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 28,
     "skill_name": "Electronics Operation",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Using electronic equipment; specialization required"
+    "notes": "Using electronic equipment; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 29,
     "skill_name": "Engineer",
     "attribute": "IQ",
     "difficulty": "Hard",
-    "notes": "Design and construction; specialization required"
+    "notes": "Design and construction; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 30,
     "skill_name": "Escape",
     "attribute": "DX",
     "difficulty": "Hard",
-    "notes": "Slipping free of ropes, cuffs, and holds"
+    "notes": "Slipping free of ropes, cuffs, and holds",
+    "requires_specialization": false
   },
   {
+    "id": 31,
     "skill_name": "Fast-Draw",
     "attribute": "DX",
     "difficulty": "Easy",
-    "notes": "Quickly readying weapons or ammo; specialization required"
+    "notes": "Quickly readying weapons or ammo; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 32,
     "skill_name": "Fast-Talk",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Fast deception and persuasion"
+    "notes": "Fast deception and persuasion",
+    "requires_specialization": false
   },
   {
+    "id": 33,
     "skill_name": "First Aid",
     "attribute": "IQ",
     "difficulty": "Easy",
-    "notes": "Emergency treatment of wounds"
+    "notes": "Emergency treatment of wounds",
+    "requires_specialization": false
   },
   {
+    "id": 34,
     "skill_name": "Forensics",
     "attribute": "IQ",
     "difficulty": "Hard",
-    "notes": "Analyzing crime-scene evidence"
+    "notes": "Analyzing crime-scene evidence",
+    "requires_specialization": false
   },
   {
+    "id": 35,
     "skill_name": "Gambling",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Games of chance and odds"
+    "notes": "Games of chance and odds",
+    "requires_specialization": false
   },
   {
+    "id": 36,
     "skill_name": "Gunner",
     "attribute": "DX",
     "difficulty": "Easy",
-    "notes": "Crew-served and mounted weapons; specialization required"
+    "notes": "Crew-served and mounted weapons; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 37,
     "skill_name": "Guns",
     "attribute": "DX",
     "difficulty": "Easy",
-    "notes": "Firearms use; specialization required (e.g. Pistol, Rifle)"
+    "notes": "Firearms use; specialization required (e.g. Pistol, Rifle)",
+    "requires_specialization": true
   },
   {
+    "id": 38,
     "skill_name": "Hazardous Materials",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Safe handling of dangerous substances; specialization required"
+    "notes": "Safe handling of dangerous substances; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 39,
     "skill_name": "Hidden Lore",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Knowledge of secret or supernatural topics; specialization required"
+    "notes": "Knowledge of secret or supernatural topics; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 40,
     "skill_name": "Hiking",
     "attribute": "HT",
     "difficulty": "Average",
-    "notes": "Long-distance travel on foot"
+    "notes": "Long-distance travel on foot",
+    "requires_specialization": false
   },
   {
+    "id": 41,
     "skill_name": "History",
     "attribute": "IQ",
     "difficulty": "Hard",
-    "notes": "Knowledge of past events; specialization required"
+    "notes": "Knowledge of past events; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 42,
     "skill_name": "Holdout",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Concealing items on one's person or in a space"
+    "notes": "Concealing items on one's person or in a space",
+    "requires_specialization": false
   },
   {
+    "id": 43,
     "skill_name": "Interrogation",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Extracting information from a subject"
+    "notes": "Extracting information from a subject",
+    "requires_specialization": false
   },
   {
+    "id": 44,
     "skill_name": "Intimidation",
     "attribute": "Will",
     "difficulty": "Average",
-    "notes": "Frightening others into compliance"
+    "notes": "Frightening others into compliance",
+    "requires_specialization": false
   },
   {
+    "id": 45,
     "skill_name": "Judo",
     "attribute": "DX",
     "difficulty": "Hard",
-    "notes": "Throws and grappling martial art"
+    "notes": "Throws and grappling martial art",
+    "requires_specialization": false
   },
   {
+    "id": 46,
     "skill_name": "Jumping",
     "attribute": "DX",
     "difficulty": "Easy",
-    "notes": "Leaping farther or higher"
+    "notes": "Leaping farther or higher",
+    "requires_specialization": false
   },
   {
+    "id": 47,
     "skill_name": "Karate",
     "attribute": "DX",
     "difficulty": "Hard",
-    "notes": "Striking martial art with strong kicks and punches"
+    "notes": "Striking martial art with strong kicks and punches",
+    "requires_specialization": false
   },
   {
+    "id": 48,
     "skill_name": "Knife",
     "attribute": "DX",
     "difficulty": "Easy",
-    "notes": "Fighting with knives and daggers"
+    "notes": "Fighting with knives and daggers",
+    "requires_specialization": false
   },
   {
+    "id": 49,
     "skill_name": "Law",
     "attribute": "IQ",
     "difficulty": "Hard",
-    "notes": "Legal knowledge; specialization required"
+    "notes": "Legal knowledge; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 50,
     "skill_name": "Leadership",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Directing and motivating groups"
+    "notes": "Directing and motivating groups",
+    "requires_specialization": false
   },
   {
+    "id": 51,
     "skill_name": "Lip Reading",
     "attribute": "Per",
     "difficulty": "Average",
-    "notes": "Understanding speech by watching lips"
+    "notes": "Understanding speech by watching lips",
+    "requires_specialization": false
   },
   {
+    "id": 52,
     "skill_name": "Lockpicking",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Opening locks without keys; specialization required"
+    "notes": "Opening locks without keys; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 53,
     "skill_name": "Mathematics",
     "attribute": "IQ",
     "difficulty": "Hard",
-    "notes": "Advanced math; specialization required"
+    "notes": "Advanced math; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 54,
     "skill_name": "Mechanic",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Repairing machinery; specialization required"
+    "notes": "Repairing machinery; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 55,
     "skill_name": "Meditation",
     "attribute": "Will",
     "difficulty": "Hard",
-    "notes": "Calming the mind and focusing inwardly"
+    "notes": "Calming the mind and focusing inwardly",
+    "requires_specialization": false
   },
   {
+    "id": 56,
     "skill_name": "Merchant",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Buying, selling, and appraising goods"
+    "notes": "Buying, selling, and appraising goods",
+    "requires_specialization": false
   },
   {
+    "id": 57,
     "skill_name": "Naturalist",
     "attribute": "IQ",
     "difficulty": "Hard",
-    "notes": "Knowledge of plants, animals, and ecosystems; specialization required"
+    "notes": "Knowledge of plants, animals, and ecosystems; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 58,
     "skill_name": "Navigation",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Finding position and route; specialization required"
+    "notes": "Finding position and route; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 59,
     "skill_name": "Observation",
     "attribute": "Per",
     "difficulty": "Average",
-    "notes": "Noticing details and watching targets"
+    "notes": "Noticing details and watching targets",
+    "requires_specialization": false
   },
   {
+    "id": 60,
     "skill_name": "Occultism",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Knowledge of the occult and mystic beliefs"
+    "notes": "Knowledge of the occult and mystic beliefs",
+    "requires_specialization": false
   },
   {
+    "id": 61,
     "skill_name": "Physician",
     "attribute": "IQ",
     "difficulty": "Hard",
-    "notes": "Long-term medical care; specialization required"
+    "notes": "Long-term medical care; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 62,
     "skill_name": "Pickpocket",
     "attribute": "DX",
     "difficulty": "Hard",
-    "notes": "Stealing items from a person unnoticed"
+    "notes": "Stealing items from a person unnoticed",
+    "requires_specialization": false
   },
   {
+    "id": 63,
     "skill_name": "Piloting",
     "attribute": "DX",
     "difficulty": "Average",
-    "notes": "Flying aircraft; specialization required"
+    "notes": "Flying aircraft; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 64,
     "skill_name": "Psychology",
     "attribute": "IQ",
     "difficulty": "Hard",
-    "notes": "Understanding mind and behavior; specialization required"
+    "notes": "Understanding mind and behavior; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 65,
     "skill_name": "Research",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Finding information in libraries and databases"
+    "notes": "Finding information in libraries and databases",
+    "requires_specialization": false
   },
   {
+    "id": 66,
     "skill_name": "Riding",
     "attribute": "DX",
     "difficulty": "Average",
-    "notes": "Riding mounts; specialization required"
+    "notes": "Riding mounts; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 67,
     "skill_name": "Running",
     "attribute": "HT",
     "difficulty": "Average",
-    "notes": "Improves running speed and endurance"
+    "notes": "Improves running speed and endurance",
+    "requires_specialization": false
   },
   {
+    "id": 68,
     "skill_name": "Savoir-Faire",
     "attribute": "IQ",
     "difficulty": "Easy",
-    "notes": "Etiquette in a social setting; specialization required"
+    "notes": "Etiquette in a social setting; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 69,
     "skill_name": "Scrounging",
     "attribute": "Per",
     "difficulty": "Easy",
-    "notes": "Finding useful items and spare parts"
+    "notes": "Finding useful items and spare parts",
+    "requires_specialization": false
   },
   {
+    "id": 70,
     "skill_name": "Search",
     "attribute": "Per",
     "difficulty": "Average",
-    "notes": "Finding hidden objects or people on close inspection"
+    "notes": "Finding hidden objects or people on close inspection",
+    "requires_specialization": false
   },
   {
+    "id": 71,
     "skill_name": "Shadowing",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Following someone without being noticed"
+    "notes": "Following someone without being noticed",
+    "requires_specialization": false
   },
   {
+    "id": 72,
     "skill_name": "Shield",
     "attribute": "DX",
     "difficulty": "Easy",
-    "notes": "Using shields to block and bash"
+    "notes": "Using shields to block and bash",
+    "requires_specialization": false
   },
   {
+    "id": 73,
     "skill_name": "Shortsword",
     "attribute": "DX",
     "difficulty": "Average",
-    "notes": "Fighting with short swords and similar blades"
+    "notes": "Fighting with short swords and similar blades",
+    "requires_specialization": false
   },
   {
+    "id": 74,
     "skill_name": "Singing",
     "attribute": "HT",
     "difficulty": "Easy",
-    "notes": "Vocal performance"
+    "notes": "Vocal performance",
+    "requires_specialization": false
   },
   {
+    "id": 75,
     "skill_name": "Smith",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Metalworking; specialization required"
+    "notes": "Metalworking; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 76,
     "skill_name": "Spear",
     "attribute": "DX",
     "difficulty": "Average",
-    "notes": "Fighting with spears and similar polearms"
+    "notes": "Fighting with spears and similar polearms",
+    "requires_specialization": false
   },
   {
+    "id": 77,
     "skill_name": "Stealth",
     "attribute": "DX",
     "difficulty": "Average",
-    "notes": "Moving quietly and staying unseen"
+    "notes": "Moving quietly and staying unseen",
+    "requires_specialization": false
   },
   {
+    "id": 78,
     "skill_name": "Strategy",
     "attribute": "IQ",
     "difficulty": "Hard",
-    "notes": "Large-scale military planning; specialization required"
+    "notes": "Large-scale military planning; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 79,
     "skill_name": "Streetwise",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Navigating urban underworld and finding contacts"
+    "notes": "Navigating urban underworld and finding contacts",
+    "requires_specialization": false
   },
   {
+    "id": 80,
     "skill_name": "Surgery",
     "attribute": "IQ",
     "difficulty": "Very Hard",
-    "notes": "Operative medical procedures; specialization required"
+    "notes": "Operative medical procedures; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 81,
     "skill_name": "Survival",
     "attribute": "Per",
     "difficulty": "Average",
-    "notes": "Staying alive in the wild; specialization required"
+    "notes": "Staying alive in the wild; specialization required",
+    "requires_specialization": true
   },
   {
+    "id": 82,
     "skill_name": "Swimming",
     "attribute": "HT",
     "difficulty": "Easy",
-    "notes": "Moving through water"
+    "notes": "Moving through water",
+    "requires_specialization": false
   },
   {
+    "id": 83,
     "skill_name": "Tactics",
     "attribute": "IQ",
     "difficulty": "Hard",
-    "notes": "Small-unit combat planning"
+    "notes": "Small-unit combat planning",
+    "requires_specialization": false
   },
   {
+    "id": 84,
     "skill_name": "Teaching",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Instructing others"
+    "notes": "Instructing others",
+    "requires_specialization": false
   },
   {
+    "id": 85,
     "skill_name": "Throwing",
     "attribute": "DX",
     "difficulty": "Average",
-    "notes": "Hurling objects accurately"
+    "notes": "Hurling objects accurately",
+    "requires_specialization": false
   },
   {
+    "id": 86,
     "skill_name": "Tracking",
     "attribute": "Per",
     "difficulty": "Average",
-    "notes": "Following trails and signs"
+    "notes": "Following trails and signs",
+    "requires_specialization": false
   },
   {
+    "id": 87,
     "skill_name": "Wrestling",
     "attribute": "DX",
     "difficulty": "Average",
-    "notes": "Grappling and pinning opponents"
+    "notes": "Grappling and pinning opponents",
+    "requires_specialization": false
   },
   {
+    "id": 88,
     "skill_name": "Writing",
     "attribute": "IQ",
     "difficulty": "Average",
-    "notes": "Composing prose and written works"
+    "notes": "Composing prose and written works",
+    "requires_specialization": false
   }
 ]

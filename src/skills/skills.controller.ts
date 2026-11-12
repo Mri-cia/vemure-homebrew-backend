@@ -1,4 +1,13 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  ParseIntPipe,
+  Patch,
+  Post,
+} from '@nestjs/common';
 import { SkillsService } from './skills.service.js';
 import { CreateSkillDto } from './dto/create-skill.dto.js';
 import { UpdateSkillDto } from './dto/update-skill.dto.js';
@@ -18,17 +27,20 @@ export class SkillsController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.skillsService.findOne(+id);
+  findOne(@Param('id', ParseIntPipe) id: number) {
+    return this.skillsService.findOne(id);
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateSkillDto: UpdateSkillDto) {
-    return this.skillsService.update(+id, updateSkillDto);
+  update(
+    @Param('id', ParseIntPipe) id: number,
+    @Body() updateSkillDto: UpdateSkillDto,
+  ) {
+    return this.skillsService.update(id, updateSkillDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.skillsService.remove(+id);
+  remove(@Param('id', ParseIntPipe) id: number) {
+    return this.skillsService.remove(id);
   }
 }

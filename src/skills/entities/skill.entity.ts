@@ -1,6 +1,8 @@
 export class Skill {
-    name: string;
-    attribute: string;
-    difficult: string;
-    notes: string;
+  id: number;
+  skill_name: string;
+  attribute: string;
+  difficulty: string;
+  notes: string;
+  requires_specialization: boolean;
 }
