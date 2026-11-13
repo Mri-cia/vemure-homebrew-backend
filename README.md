@@ -1,132 +1,184 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Vemure-Homebrew-Backend
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Sebuah RESTful API backend yang dibuat dengan [NestJS](https://nestjs.com/) for managing data modul GURPS (skill dan trait) untuk dikirim kepada vemure-homebrew-react sebagai frontend. API ini dapat mengirim, mengubah, mengunggah, dan menghapus data, walaupun masih bersifat sementara pada array memory
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Langkah selanjutnya:
+* Menghubungkan dengan database PostgreSQL
 
-## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+---
 
-## Project setup
+## Tech Stack & Architecture
 
-```bash
-$ npm install
+- **Framework**: [NestJS 12](https://nestjs.com/) (Node.js framework)
+- **Module System**: Pure ECMAScript Modules (ESM with `.js` import extensions and top-level `await`)
+- **Validation & Transformation**: `class-validator`, `class-transformer`, and `@nestjs/mapped-types`
+- **Testing**: [Vitest](https://vitest.dev/)
+- **Linter**: [oxlint](https://oxc.rs/)
+- **Runtime Persistence**: In-memory array store initialized on application startup from JSON seeds
+
+---
+
+## Project Structure
+
+```text
+vemure-homebrew-backend/
+├── src/
+│   ├── data/
+│   │   ├── gurps_skills.json      # Seed data for GURPS skills
+│   │   └── gurps_traits.json      # Seed data for GURPS traits
+│   ├── skills/
+│   │   ├── dto/
+│   │   │   ├── create-skill.dto.ts # Validation rules for creating a skill
+│   │   │   └── update-skill.dto.ts # Partial type for updating a skill
+│   │   ├── entities/
+│   │   │   └── skill.entity.ts     # Skill domain entity
+│   │   ├── skills.controller.ts    # HTTP route handlers for /skills
+│   │   ├── skills.module.ts        # Skills module declaration
+│   │   └── skills.service.ts       # Business logic & in-memory CRUD operations
+│   ├── traits/
+│   │   ├── dto/
+│   │   │   ├── create-trait.dto.ts # Validation rules for creating a trait
+│   │   │   └── update-trait.dto.ts # Partial type for updating a trait
+│   │   ├── trait.entity.ts         # Trait domain entity
+│   │   ├── traits.controller.ts    # HTTP route handlers for /traits
+│   │   ├── traits.module.ts        # Traits module declaration
+│   │   └── traits.service.ts       # Business logic & in-memory CRUD operations
+│   ├── app.controller.ts
+│   ├── app.module.ts
+│   ├── app.service.ts
+│   └── main.ts                     # Application entry point with global ValidationPipe
+├── package.json
+└── README.md
 ```
 
-## Compile and run the project
+---
 
-```bash
-# development
-$ npm run start
+## Data Models
 
-# watch mode
-$ npm run start:dev
+### 1. Skill
+| Field | Type | Description / Validation |
+|---|---|---|
+| `id` | `number` | Unique identifier (auto-incremented `max(id) + 1`) |
+| `skill_name` | `string` | Unique name (case-insensitive check, 2–60 characters) |
+| `attribute` | `string` | Base governing attribute: `ST`, `DX`, `IQ`, `HT`, `Per`, or `Will` |
+| `difficulty` | `string` | Difficulty level: `Easy`, `Average`, `Hard`, or `Very Hard` |
+| `notes` | `string` | Optional description or notes (max 200 characters, default: `""`) |
+| `requires_specialization` | `boolean` | Optional flag indicating specialization requirement (default: `false`) |
 
-# production mode
-$ npm run start:prod
+### 2. Trait
+| Field | Type | Description / Validation |
+|---|---|---|
+| `id` | `number` | Unique identifier (auto-incremented `max(id) + 1`) |
+| `trait_name` | `string` | Unique name (case-insensitive check, 2–80 characters) |
+| `type` | `string` | Classification: `Physical`, `Mental`, or `Social` |
+| `category` | `string` | Category: `advantage`, `disadvantage`, or `quirk` |
+| `notes` | `string` | Optional description or notes (max 200 characters, default: `""`) |
+| `is_custom` | `boolean` | Server-managed flag (`false` for seed data, `true` for newly created traits) |
+
+---
+
+## API Endpoints
+
+### Skills (`/skills`)
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/skills` | Retrieve all skills |
+| `GET` | `/skills/:id` | Retrieve a skill by numeric ID (`404` if not found) |
+| `POST` | `/skills` | Create a new skill (`400` on validation error, `409` on duplicate name) |
+| `PATCH` | `/skills/:id` | Update an existing skill partially (`404` if not found, `409` on name conflict) |
+| `DELETE` | `/skills/:id` | Remove a skill by ID (`404` if not found) |
+
+#### Example: Create Skill (`POST /skills`)
+```json
+{
+  "skill_name": "Tactics",
+  "attribute": "IQ",
+  "difficulty": "Hard",
+  "notes": "Military planning and tactical maneuver strategy",
+  "requires_specialization": false
+}
 ```
 
-## Run tests
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+#### Example: Update Skill (`PATCH /skills/1`)
+```json
+{
+  "notes": "Updated notes with specialized training details"
+}
 ```
 
-## Deployment
+---
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+### Traits (`/traits`)
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/traits` | Retrieve all traits |
+| `GET` | `/traits?category_eq={category}` | Filter traits by category (`advantage`, `disadvantage`, `quirk`) |
+| `GET` | `/traits/:id` | Retrieve a trait by numeric ID (`404` if not found) |
+| `POST` | `/traits` | Create a new custom trait (`400` on validation error, `409` on duplicate name) |
+| `PATCH` | `/traits/:id` | Update an existing trait partially (`404` if not found, `409` on name conflict) |
+| `DELETE` | `/traits/:id` | Remove a trait by ID (`404` if not found) |
 
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+#### Example: Create Trait (`POST /traits`)
+```json
+{
+  "trait_name": "Night Vision",
+  "type": "Physical",
+  "category": "advantage",
+  "notes": "Can see normally in dim or dark environments"
+}
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Observability
-
-In production applications, observability is essential for understanding how your system behaves, detecting issues early, and maintaining reliable performance.
-
-[NestJS Observe](https://observe.nestjs.com) automatically instruments your NestJS application, giving you deep visibility into your system with minimal setup:
-
-- **Distributed tracing:** Follow requests across services and understand how they flow through your system.
-- **Waterfall analysis:** Visualize request execution and identify slow operations, bottlenecks, and unexpected delays.
-- **Performance analysis:** Analyze application performance in real time and quickly pinpoint areas that need optimization.
-- **Metrics:** Track key application and infrastructure metrics to understand system health and performance trends.
-- **Logging:** Centralize and correlate logs with traces and other telemetry to make debugging easier.
-- **Error tracking:** Detect errors quickly and investigate their root causes with the surrounding context.
-- **SLA monitoring:** Track service-level objectives and identify when your application is approaching or exceeding defined thresholds.
-- **Alarms and alerts:** Set up alerts for critical errors, performance degradation, SLA violations, and other anomalies so your team can react quickly.
-
-To add it to this project, run this and approve the code it prints at [observe.nestjs.com/link](https://observe.nestjs.com/link) - signing up for free if you have no account:
-
-```bash
-$ npx @nestjs/observe link
+#### Example: Update Trait (`PATCH /traits/1`)
+```json
+{
+  "notes": "Updated description for this trait"
+}
 ```
 
-It installs `@nestjs/observe`, wires it into `AppModule` and `main.ts`, and writes the app key and secret into `.env`, which every `nest start` script (`start`, `start:dev`, `start:debug`) then loads. In production, set `OBSERVE_APP_KEY` and `OBSERVE_APP_SECRET` in the environment instead.
+---
 
-Or do it by hand:
+## Getting Started
+
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v20 or higher recommended)
+- [npm](https://www.npmjs.com/) or [pnpm](https://pnpm.io/)
+
+### Installation
 
 ```bash
-$ npm install @nestjs/observe
+npm install
 ```
 
-Then follow the [setup guide](https://docs.nestjs.com/observability/sdk) - it takes a single import and an app key.
+### Running the Application
 
-The free plan needs no payment details and covers 300,000 events a month. You can also browse the [live demo](https://www.observe-demo.nestjs.com/dashboard) first - the whole dashboard over a busy service's data, with nothing to install.
+```bash
+# Development mode with hot-reload
+npm run start:dev
 
-## Resources
+# Standard run
+npm run start
 
-Check out a few resources that may come in handy when working with NestJS:
+# Production build and run
+npm run build
+npm run start:prod
+```
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Auto-instrument your application with [NestJS Observe](https://observe.nestjs.com). Distributed tracing, metrics, and logging made easy. Error tracking and performance monitoring for your NestJS applications.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+By default, the server runs on `http://localhost:3001` (or the port defined by `process.env.PORT`) with CORS enabled for `http://localhost:5173`.
 
-## Support
+---
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+## Testing & Quality Assurance
 
-## Stay in touch
+```bash
+# Run unit tests via Vitest
+npm test
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+# Run code linter via oxlint
+npm run lint
 
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+# Build verification
+npm run build
+```
