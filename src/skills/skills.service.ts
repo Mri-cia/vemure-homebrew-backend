@@ -8,18 +8,16 @@ import { join } from 'path';
 import { CreateSkillDto } from './dto/create-skill.dto.js';
 import { UpdateSkillDto } from './dto/update-skill.dto.js';
 import { Skill } from './entities/skill.entity.js';
+import { PrismaService } from '../../prisma/prisma.service.js';
 
 @Injectable()
 export class SkillsService {
   private skills: Skill[];
 
-  constructor() {
-    const filepath = join(process.cwd(), 'src', 'data', 'gurps_skills.json');
-    this.skills = JSON.parse(readFileSync(filepath, 'utf-8')) as Skill[];
-  }
+  constructor(private readonly prisma: PrismaService) {}
 
   findAll(): Skill[] {
-    return this.skills;
+    return ;
   }
 
   findOne(id: number): Skill {
