@@ -3,95 +3,86 @@ import {
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
-import { readFileSync } from 'fs';
-import { join } from 'path';
 import { CreateSkillDto } from './dto/create-skill.dto.js';
 import { UpdateSkillDto } from './dto/update-skill.dto.js';
 import { Skill } from './entities/skill.entity.js';
-import { PrismaService } from '../../prisma/prisma.service.js';
+import { PrismaService } from '../prisma/prisma.service.js';
 
 @Injectable()
 export class SkillsService {
-  private skills: Skill[];
-
   constructor(private readonly prisma: PrismaService) {}
 
-  findAll(): Skill[] {
-    return ;
+  async findAll(): Promise<Skill[]> {
+    return this.prisma.skill.findMany();
   }
 
-  findOne(id: number): Skill {
-    const skill = this.skills.find((s) => s.id === id);
+  async findOne(id: number): Promise<Skill> {
+    const skill = await this.prisma.skill.findUnique({ where: { id } });
     if (!skill) {
       throw new NotFoundException(`Skill dengan id ${id} tidak ditemukan`);
     }
     return skill;
   }
 
-  create(createSkillDto: CreateSkillDto): Skill {
-    const isDuplicate = this.skills.some(
-      (s) =>
-        s.skill_name.trim().toLowerCase() ===
-        createSkillDto.skill_name.trim().toLowerCase(),
-    );
-    if (isDuplicate) {
+  async create(createSkillDto: CreateSkillDto): Promise<Skill> {
+    const trimmedName = createSkillDto.skill_name.trim();
+    const existing = await this.prisma.skill.findFirst({
+      where: {
+        skill_name: {
+          equals: trimmedName,
+          mode: 'insensitive',
+        },
+      },
+    });
+    if (existing) {
       throw new ConflictException(
         `Skill dengan nama '${createSkillDto.skill_name}' sudah ada`,
       );
     }
 
-    const maxId = this.skills.reduce((max, s) => (s.id > max ? s.id : max), 0);
-    const newSkill: Skill = {
-      id: maxId + 1,
-      skill_name: createSkillDto.skill_name,
-      attribute: createSkillDto.attribute,
-      difficulty: createSkillDto.difficulty,
-      notes: createSkillDto.notes ?? '',
-      requires_specialization:
-        createSkillDto.requires_specialization ?? false,
-    };
-
-    this.skills.push(newSkill);
-    return newSkill;
+    return this.prisma.skill.create({
+      data: {
+        skill_name: trimmedName,
+        attribute: createSkillDto.attribute,
+        difficulty: createSkillDto.difficulty,
+        notes: createSkillDto.notes ?? '',
+        requires_specialization:
+          createSkillDto.requires_specialization ?? false,
+      },
+    });
   }
 
-  update(id: number, updateSkillDto: UpdateSkillDto): Skill {
-    const index = this.skills.findIndex((s) => s.id === id);
-    if (index === -1) {
-      throw new NotFoundException(`Skill dengan id ${id} tidak ditemukan`);
-    }
+  async update(id: number, updateSkillDto: UpdateSkillDto): Promise<Skill> {
+    await this.findOne(id);
 
+    const dataToUpdate: UpdateSkillDto = Object.assign({}, updateSkillDto);
     if (updateSkillDto.skill_name) {
-      const isDuplicate = this.skills.some(
-        (s) =>
-          s.id !== id &&
-          s.skill_name.trim().toLowerCase() ===
-            updateSkillDto.skill_name!.trim().toLowerCase(),
-      );
-      if (isDuplicate) {
+      const trimmedName = updateSkillDto.skill_name.trim();
+      const existing = await this.prisma.skill.findFirst({
+        where: {
+          id: { not: id },
+          skill_name: {
+            equals: trimmedName,
+            mode: 'insensitive',
+          },
+        },
+      });
+      if (existing) {
         throw new ConflictException(
           `Skill dengan nama '${updateSkillDto.skill_name}' sudah ada`,
         );
       }
+      dataToUpdate.skill_name = trimmedName;
     }
 
-    const updatedSkill: Skill = Object.assign(
-      {},
-      this.skills[index],
-      updateSkillDto,
-      { id },
-    );
-
-    this.skills[index] = updatedSkill;
-    return updatedSkill;
+    return this.prisma.skill.update({
+      where: { id },
+      data: dataToUpdate,
+    });
   }
 
-  remove(id: number): Skill {
-    const index = this.skills.findIndex((s) => s.id === id);
-    if (index === -1) {
-      throw new NotFoundException(`Skill dengan id ${id} tidak ditemukan`);
-    }
-    const [deletedSkill] = this.skills.splice(index, 1);
-    return deletedSkill;
+  async remove(id: number): Promise<Skill> {
+    await this.findOne(id);
+    return this.prisma.skill.delete({ where: { id } });
   }
 }

@@ -1,0 +1,29 @@
+generator client {
+  provider     = "prisma-client"
+  output       = "../generated/prisma"
+  moduleFormat = "esm"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Skill {
+  id                      Int     @id @default(autoincrement())
+  skill_name              String  @unique
+  attribute               String
+  difficulty              String
+  notes                   String  @default("")
+  requires_specialization Boolean @default(false)
+  @@map("skills")
+}
+
+model Trait {
+  id         Int     @id @default(autoincrement())
+  trait_name String  @unique
+  type       String
+  category   String
+  notes      String  @default("")
+  is_custom  Boolean @default(true)
+  @@map("traits")
+}

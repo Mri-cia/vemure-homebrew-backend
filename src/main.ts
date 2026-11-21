@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module.js';
@@ -7,7 +8,7 @@ async function bootstrap() {
 
   app.useGlobalPipes(
     new ValidationPipe({
-      whitelist: true,
+      whitelist: true, 
       forbidNonWhitelisted: true,
       transform: true,
     }),
